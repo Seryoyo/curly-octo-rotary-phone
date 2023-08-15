@@ -1,16 +1,32 @@
-div {
-    border: 1px solid black;
-    min-height: 54.9px;
-    min-width: 116.89px;
+body {
     display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+
 }
 
-.container {
+div {
+    border: 1px solid black;
+    display: flex;
+    min-width: 57px;
+    max-height: 57px;
+    flex-direction:row;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    border: 5px solid red;
+
+    
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    border: 5px solid black;
+    min-width: 100px;
+    max-width: 944px;
+    min-height: 900px;
+    display: flex;    
+    
     
 }
 
