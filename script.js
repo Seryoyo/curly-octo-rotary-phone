@@ -1,13 +1,10 @@
 let container = document.querySelector('#container');
 let sizeButton = document.querySelector('#size');
-let size = 0;
+let removeButton = document.querySelector('#remove');
+let size = 16;
 let grids = 0;
 
-for (let i = 0; i < 100; i++){
-    let div = document.createElement('div');
-    div.classList.add('grid');
-    container.appendChild(div);
-};
+makeNewGrid();
 
 sizeButton.addEventListener('click', function () {
     size = prompt("What would you like your grid size by? Enter one number, it will automatically add the second. Ex: 10 -> 10x10");
@@ -16,16 +13,22 @@ sizeButton.addEventListener('click', function () {
     }
     size = parseInt(size);
 
-    let divs = document.querySelectorAll('.grid');
-
-    divs.forEach((divi) => {
-        divi.remove();
-    });
 
     makeNewGrid();
 });
 
+removeButton.addEventListener('click', function(){
+    makeNewGrid();
+});
+
 function makeNewGrid(){
+
+
+let divs = document.querySelectorAll('.grid');
+
+divs.forEach((divi) => {
+    divi.remove();
+});
 
 let boxSize = (Math.sqrt(902500/(size*size))) - 2;
 
@@ -44,6 +47,8 @@ grids.forEach(grid => grid.addEventListener('mouseover', () => {
 
 
 }
+
+
 
 grids = document.querySelectorAll(".grid");
 
