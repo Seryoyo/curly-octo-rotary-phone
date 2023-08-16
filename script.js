@@ -27,9 +27,9 @@ sizeButton.addEventListener('click', function () {
 
 function makeNewGrid(){
 
-let boxSize = (Math.sqrt(902500/(sizesize))) - 2;
+let boxSize = (Math.sqrt(902500/(size*size))) - 2;
 
-for (let i = 0; i < sizesize; i++){
+for (let i = 0; i < size*size; i++){
     let div = document.createElement('div');
     div.classList.add('grid');
     div.setAttribute('style', 'min-width: ' + boxSize + "px; min-height: " + boxSize + 'px; max-width: ' + boxSize + "px; max-height: " + boxSize + "px;");
@@ -50,4 +50,3 @@ grids = document.querySelectorAll(".grid");
 grids.forEach(grid => grid.addEventListener('mouseover', () => {
     grid.style.background = "black";
 }));
-
