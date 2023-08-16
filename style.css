@@ -25,3 +25,14 @@ body {
     max-height: 93px; 
 }
 
+button {
+    width: 60px;
+    min-height: 50vh;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+}
